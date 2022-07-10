@@ -10,8 +10,8 @@ import userData from "@constants/data";
 export default function Home({ repositories }) {
   return (
     <ContainerBlock
-      title="Manu Arora - Developer, Writer, Creator"
-      description="This is a template built specifically for my blog - Creating a developer portfolio that gets you a job."
+      title="Guy Thongtrachoo - Web Dev, App Dev, Backend"
+      description="Meticulous self-taught programmer."
     >
       <Hero />
       <FavouriteProjects />
@@ -21,11 +21,10 @@ export default function Home({ repositories }) {
 }
 
 export const getServerSideProps = async () => {
-  console.log(process.env.GITHUB_AUTH_TOKEN);
+  console.log('sdsd',process.env.GITHUB_AUTH_TOKEN);
   let token = process.env.GITHUB_AUTH_TOKEN;
 
   const repositories = await getLatestRepos(userData, token);
-  // console.log("REPOSITORIES", repositories);
 
   return {
     props: {
