@@ -15,6 +15,7 @@ export default function Home({ repositories }) {
       .then(
         (result) => {
           console.log(result)
+          //sdsd
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
